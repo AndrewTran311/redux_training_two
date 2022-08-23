@@ -19,36 +19,36 @@ class App extends Component {
       //   status : -1
       // },
       // keyword : '',
-      sortBy : 'name',
-      sortValue : 1
+      // sortBy : 'name',
+      // sortValue : 1
     }
   }
 
 
   
-  // onToggleForm = () => {
-  //   var { itemEditing } = this.props;
-  //   if ( itemEditing && itemEditing.id !== '') {
-  //       this.props.onOpenForm();
-  //   }else{
-  //     this.props.onToggleForm();
-  //   }
-  //   this.props.onClearTask({
-  //       id : '',
-  //       name : '',
-  //       status : false
-  //   })
-  // }
+  onToggleForm = () => {
+    var { itemEditing } = this.props;
+    if ( itemEditing && itemEditing.id !== '') {
+        this.props.onOpenForm();
+    }else{
+      this.props.onToggleForm();
+    }
+    this.props.onClearTask({
+        id : '',
+        name : '',
+        status : false
+    })
+  }
   // onCloseForm = () => {
   //   this.setState({
   //     isDisplayForm: false
   //   })
   // }
-  onShowForm = () => {
-    this.setState({
-      isDisplayFrom: true
-    })
-  }
+  // onShowForm = () => {
+  //   this.setState({
+  //     isDisplayFrom: true
+  //   })
+  // }
   // onSubmit = (data) => {
   //   var { tasks } = this.state // tasks = this.state.tasks
   //   if (data.id === '') {
